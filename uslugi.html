@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="bg" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | New Level Видин</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-orange: #FF8C00; --sky-blue: #00BFFF; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.98)), url('https://preotkrii.bg/wp-content/uploads/2022/09/280079643_3257813537785990_669554798557224260_n-1024x683.jpg');
+            background-size: cover; background-attachment: fixed; color: white;
+        }
+        .text-gradient { background: linear-gradient(to right, var(--sky-blue), var(--primary-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .service-card:hover { border-color: var(--primary-orange); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .check-list li { display: flex; align-items: start; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: #d1d5db; }
+        .check-list li::before { content: '✓'; color: var(--primary-orange); font-weight: bold; }
+    </style>
+</head>
+<body class="relative">
+
+    <nav class="sticky top-0 z-50 backdrop-blur-xl border-b border-white/5 bg-black/60">
+        <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-tighter"><span class="text-sky-400">NEW</span><span class="text-[#FF8C00]">LEVEL</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="index.html" class="hover:text-white transition">Начало</a>
+                <a href="uslugi.html" class="text-white">Услуги</a>
+                <a href="blog.html" class="hover:text-white transition">Блог</a>
+                <a href="kontakti.html" class="hover:text-white transition">Контакти</a>
+            </div>
+            <a href="kontakti.html" class="bg-[#FF8C00] px-5 py-2 rounded-full font-bold text-black text-sm hover:scale-105 transition shadow-lg shadow-orange-500/20">Запитване</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Практически <span class="text-gradient">Решения</span></h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg font-medium">
+            Тук ще намерите техническо описание на това, което правим. Без скрити условия – само конкретни инструменти за растеж.
+        </p>
+    </section>
+
+    <section class="pb-24 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-sky-400/10 rounded-xl flex items-center justify-center text-2xl mb-6 text-sky-400 border border-sky-400/20">💻</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Изработка на Сайт</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Изграждане на бързи и сигурни сайтове, които служат като дигитален офис за вашия бизнес.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>Индивидуален UX/UI дизайн</li>
+                        <li>Мобилна версия (Responsive)</li>
+                        <li>Административен панел (CMS)</li>
+                        <li>Базова SEO оптимизация</li>
+                        <li>SSL Сертификат за сигурност</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-2xl mb-6 text-orange-500 border border-orange-500/20">📱</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Мобилни Приложения</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">PWA (Progressive Web Apps) или нативни приложения за директна връзка с клиентите.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>iOS и Android съвместимост</li>
+                        <li>Push известия към клиенти</li>
+                        <li>Системи за лоялност</li>
+                        <li>Бързо зареждане офлайн</li>
+                        <li>Интеграция с вашия софтуер</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300 border-sky-400/30">
+                <div class="w-14 h-14 bg-sky-400/20 rounded-xl flex items-center justify-center text-2xl mb-6 text-sky-400 border border-sky-400/40">🤖</div>
+                <h3 class="text-xl font-bold mb-4 text-sky-400">AI Агенти & Ботове</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Внедряване на изкуствен интелект за автоматизация на комуникацията и процесите.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>Чатбот за Facebook/Instagram/Site</li>
+                        <li>Автоматични отговори (24/7)</li>
+                        <li>Обучение на AI с ваши данни</li>
+                        <li>Записване на часове/поръчки</li>
+                        <li>Прехвърляне към жив оператор</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-2xl mb-6 text-purple-400 border border-purple-500/20">🎥</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Създаване на Съдържание</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Професионално заснемане, монтаж и писане на текстове, които ангажират аудиторията.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>Заснемане на Reels/TikTok видео</li>
+                        <li>Професионален видео монтаж</li>
+                        <li>Писане на рекламни текстове (Copy)</li>
+                        <li>Продуктова фотография</li>
+                        <li>Графичен дизайн на постове</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center text-2xl mb-6 text-green-400 border border-green-500/20">📈</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Платена Реклама & SEO</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Позициониране на предни места в Google и таргетиране на клиенти в социалните мрежи.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>Google Ads кампании (PPC)</li>
+                        <li>Facebook & Instagram Ads</li>
+                        <li>Ключови думи и SEO одит</li>
+                        <li>Локално SEO (Google Maps)</li>
+                        <li>Месечни отчети за резултатите</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-pink-500/10 rounded-xl flex items-center justify-center text-2xl mb-6 text-pink-400 border border-pink-500/20">👍</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Управление на Социални Мрежи</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Цялостна поддръжка на вашите профили, за да изградите лоялна общност.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>Изготвяне на месечен календар</li>
+                        <li>Публикуване на постове/сторита</li>
+                        <li>Отговаряне на коментари</li>
+                        <li>Организиране на игри/томболи</li>
+                        <li>Анализ на аудиторията</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-yellow-500/10 rounded-xl flex items-center justify-center text-2xl mb-6 text-yellow-400 border border-yellow-500/20">📧</div>
+                <h3 class="text-xl font-bold mb-4 text-white">Email Маркетинг</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Автоматизирани бюлетини и кампании за повторни продажби към съществуващи клиенти.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>Събиране на база данни (leads)</li>
+                        <li>Дизайн на Newsletter шаблони</li>
+                        <li>Автоматизация (напр. изоставена количка)</li>
+                        <li>Персонализирани оферти</li>
+                        <li>A/B тестове на заглавията</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center text-2xl mb-6 text-indigo-400 border border-indigo-500/20">🎙️</div>
+                <h3 class="text-xl font-bold mb-4 text-white">PR & Медийно Присъствие</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Управление на репутацията и позициониране в местни и национални медии.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>Писане на прес съобщения</li>
+                        <li>Връзки с медии във Видин</li>
+                        <li>Управление на кризисен PR</li>
+                        <li>Организиране на събития</li>
+                        <li>Интервюта и статии</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card bg-glass p-8 rounded-3xl transition-all duration-300 border-orange-500/30">
+                <div class="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center text-2xl mb-6 text-orange-500 border border-orange-500/40">♟️</div>
+                <h3 class="text-xl font-bold mb-4 text-orange-500">Бизнес Стратегия</h3>
+                <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Дългосрочно планиране и консултации за дигитална трансформация.</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs font-bold uppercase text-gray-500 mb-3 tracking-widest">Какво включва:</p>
+                    <ul class="check-list">
+                        <li>Пълен одит на текущото състояние</li>
+                        <li>Анализ на конкуренцията</li>
+                        <li>План за растеж (Roadmap)</li>
+                        <li>Определяне на бюджети</li>
+                        <li>Месечни консултации</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 text-center border-t border-white/5 bg-black/40">
+        <h2 class="text-3xl md:text-5xl font-black mb-6">Не сте сигурни какво ви трябва?</h2>
+        <p class="text-gray-400 mb-10 text-lg">Запазете час за безплатен разговор и ние ще изготвим план специално за вас.</p>
+        <a href="kontakti.html" class="bg-white text-black px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-2xl">
+            Свържете се с нас
+        </a>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-500 text-sm">
+        &copy; 2026 New Level Agency. Всички права запазени.
+    </footer>
+
+</body>
+</html>
