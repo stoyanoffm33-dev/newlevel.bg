@@ -178,104 +178,20 @@
   <section id="mentor" class="py-20 relative z-10">
     <div class="max-w-7xl mx-auto px-4">
         
-        <div id="benefits-container" class="flex flex-col md:flex-row justify-center items-center gap-6 mb-24 opacity-0 transition-opacity duration-700">
-            
-            <div class="benefit-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex items-center gap-4 bg-white/5 px-8 py-4 rounded-full border border-white/10 hover:border-green-500/50 hover:bg-white/10 group cursor-default">
-                <div class="relative w-6 h-6 flex items-center justify-center">
-                    <div class="absolute inset-0 bg-green-500/20 rounded-full scale-0 group-hover:scale-125 transition-transform duration-500"></div>
-                    <svg class="w-6 h-6 text-green-500 drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                        <path class="check-path" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                </div>
-                <span class="font-bold text-sm md:text-base text-gray-200 group-hover:text-white transition-colors">Повече свободно време</span>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-24">
+            <div class="flex items-center gap-3 bg-white/5 px-6 py-3 rounded-full border border-white/10">
+                <span class="text-green-500 text-xl">✅</span>
+                <span class="font-bold text-sm md:text-base">Повече свободно време</span>
             </div>
-
-            <div class="benefit-item opacity-0 translate-y-8 transition-all duration-700 ease-out delay-150 flex items-center gap-4 bg-white/5 px-8 py-4 rounded-full border border-white/10 hover:border-green-500/50 hover:bg-white/10 group cursor-default">
-                <div class="relative w-6 h-6 flex items-center justify-center">
-                    <div class="absolute inset-0 bg-green-500/20 rounded-full scale-0 group-hover:scale-125 transition-transform duration-500"></div>
-                    <svg class="w-6 h-6 text-green-500 drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                        <path class="check-path" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                </div>
-                <span class="font-bold text-sm md:text-base text-gray-200 group-hover:text-white transition-colors">Гарантиран поток от запитвания</span>
+            <div class="flex items-center gap-3 bg-white/5 px-6 py-3 rounded-full border border-white/10">
+                <span class="text-green-500 text-xl">✅</span>
+                <span class="font-bold text-sm md:text-base">Гарантиран поток от запитвания</span>
             </div>
-
-            <div class="benefit-item opacity-0 translate-y-8 transition-all duration-700 ease-out delay-300 flex items-center gap-4 bg-white/5 px-8 py-4 rounded-full border border-white/10 hover:border-green-500/50 hover:bg-white/10 group cursor-default">
-                <div class="relative w-6 h-6 flex items-center justify-center">
-                    <div class="absolute inset-0 bg-green-500/20 rounded-full scale-0 group-hover:scale-125 transition-transform duration-500"></div>
-                    <svg class="w-6 h-6 text-green-500 drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                        <path class="check-path" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                </div>
-                <span class="font-bold text-sm md:text-base text-gray-200 group-hover:text-white transition-colors">Фиксирани цени без скрити такси</span>
+            <div class="flex items-center gap-3 bg-white/5 px-6 py-3 rounded-full border border-white/10">
+                <span class="text-green-500 text-xl">✅</span>
+                <span class="font-bold text-sm md:text-base">Фиксирани цени без скрити такси</span>
             </div>
-
         </div>
-
-        <style>
-            /* Настройка за рисуване на линията */
-            .check-path {
-                stroke-dasharray: 24;
-                stroke-dashoffset: 24; /* Скрито начално състояние */
-                transition: stroke-dashoffset 0.6s cubic-bezier(0.65, 0, 0.45, 1);
-            }
-            /* Класът, който се добавя от JS */
-            .benefit-item.active .check-path {
-                stroke-dashoffset: 0; /* Изрисувано състояние */
-            }
-            .benefit-item.active {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        </style>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.5 // Задейства се, когато 50% от елемента се види
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const container = entry.target;
-                            container.style.opacity = '1'; // Показва контейнера
-                            
-                            // Намира всички елементи вътре
-                            const items = container.querySelectorAll('.benefit-item');
-                            
-                            items.forEach((item, index) => {
-                                // Добавяме закъснение за всеки следващ елемент
-                                setTimeout(() => {
-                                    item.classList.add('active');
-                                    item.classList.remove('opacity-0', 'translate-y-8');
-                                }, index * 200); // 200ms разлика между всеки
-                            });
-
-                            // Спираме да наблюдаваме след като се е активирало веднъж
-                            observer.unobserve(container);
-                        }
-                    });
-                }, observerOptions);
-
-                const benefitsContainer = document.getElementById('benefits-container');
-                if (benefitsContainer) {
-                    observer.observe(benefitsContainer);
-                }
-            });
-        </script>
-        ```
-
-### Какво точно се случва тук:
-1.  **CSS (`.check-path`)**: Използвахме `stroke-dashoffset`, за да скрием линията на тикчето.
-2.  **HTML**: Добавихме `opacity-0` и `translate-y-8` (надолу), за да са скрити в началото.
-3.  **JavaScript**: Кодът "слуша" кога скролваш до `#benefits-container`. Щом го види:
-    * Показва първото тикче.
-    * Чака 200ms -> Показва второто.
-    * Чака още 200ms -> Показва третото.
-    * Активира анимацията на рисуване на самото тикче.
 
         <div class="bg-glass rounded-[40px] border border-white/10 overflow-hidden shadow-2xl">
             <div class="flex flex-col md:flex-row items-stretch">
@@ -313,132 +229,71 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700">
+                <div class="service-card">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/qhgampht.json" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/qhgampht.json" trigger="hover" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Вашият бизнес работи и продава, докато вие почивате.</h3>
                 </div>
 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700">
+                <div class="service-card">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/kypsurse.json" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/kypsurse.json" trigger="hover" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Бъдете на един клик разстояние в джоба на всеки клиент</h3>
                 </div>
 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700 border-sky-400/30">
+                <div class="service-card border-sky-400/30">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/unukghxb.json" colors="primary:#ffffff,secondary:#00BFFF" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/unukghxb.json" trigger="hover" colors="primary:#ffffff,secondary:#00BFFF" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Освободете се от скучната работа и се фокусирайте върху растежа.</h3>
                 </div>
 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700">
+                <div class="service-card">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/msetysfq.json" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/msetysfq.json" trigger="hover" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Разкажете история, която превръща зрителите в купувачи</h3>
                 </div>
 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700">
+                <div class="service-card">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/mrdiiocb.json" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/mrdiiocb.json" trigger="hover" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Бъдете първият избор на клиентите, когато търсят в Google.</h3>
                 </div>
 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700">
+                <div class="service-card">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/hpivxauj.json" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/hpivxauj.json" trigger="hover" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Изградете общност, която рекламира бизнеса ви вместо вас.</h3>
                 </div>
 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700">
+                <div class="service-card">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/diuoeasy.json" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/diuoeasy.json" trigger="hover" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Продавайте на най-лоялните си клиенти с лекота и автоматизация.</h3>
                 </div>
 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700">
+                <div class="service-card">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/fpipqhrr.json" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/fpipqhrr.json" trigger="hover" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Спечелете доверието на клиентите си, преди още да са се свързали с вас</h3>
                 </div>
 
-                <div class="service-card opacity-0 translate-y-8 transition-all duration-700">
+                <div class="service-card">
                     <div class="sticker-wrapper">
-                        <lord-icon src="https://cdn.lordicon.com/pkvdaisq.json" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/pkvdaisq.json" trigger="hover" colors="primary:#ffffff,secondary:#ff9d00" style="width:80px;height:80px"></lord-icon>
                     </div>
                     <h3>Инвестирайте с увереност, знаейки точно как всяко евро ще ви донесе печалба.</h3>
                 </div>
 
             </div>
         </div>
-
-        <style>
-            /* Анимация за "Ореола" (Halo Effect) */
-            @keyframes soft-halo {
-                0% {
-                    box-shadow: 0 0 0 rgba(255, 140, 0, 0);
-                    border-color: rgba(255, 255, 255, 0.1);
-                }
-                50% {
-                    box-shadow: 0 0 25px rgba(255, 140, 0, 0.25); /* Оранжево сияние */
-                    border-color: rgba(255, 140, 0, 0.4);
-                }
-                100% {
-                    box-shadow: 0 0 0 rgba(255, 140, 0, 0);
-                    border-color: rgba(255, 255, 255, 0.1);
-                }
-            }
-
-            .service-card.active-glow {
-                animation: soft-halo 2s ease-out forwards;
-                opacity: 1;
-                transform: translateY(0);
-            }
-        </style>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const observerOptions = {
-                    root: null,
-                    threshold: 0.3 // Задейства се, когато 30% от картата е видима
-                };
-
-                const serviceObserver = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            const card = entry.target;
-                            
-                            // 1. Активираме визуалния ефект (поява + ореол)
-                            card.classList.remove('opacity-0', 'translate-y-8');
-                            card.classList.add('active-glow');
-
-                            // 2. Намираме иконата и я пускаме
-                            const icon = card.querySelector('lord-icon');
-                            if (icon && icon.player) {
-                                icon.player.play();
-                            }
-
-                            // Спираме да наблюдаваме тази карта (за да не се пуска пак при скрол нагоре)
-                            serviceObserver.unobserve(card);
-                        }
-                    });
-                }, observerOptions);
-
-                // Избираме всички карти и ги добавяме към наблюдателя
-                document.querySelectorAll('.service-card').forEach((card, index) => {
-                    // Малко закъснение за всяка карта, за да се появяват една след друга (cascade effect)
-                    card.style.transitionDelay = `${index * 50}ms`;
-                    serviceObserver.observe(card);
-                });
-            });
-        </script>
     </section>
 <section id="calculator" class="py-24 relative z-10 border-t border-white/5 bg-black/20">
     <div class="max-w-4xl mx-auto px-4">
@@ -448,11 +303,11 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Колко <span class="text-orange-500">губи</span> бизнесът Ви?</h2>
                 <p class="text-gray-400">
-                    Използвайте слайдърите, за да изчислите пропуснатите ползи от липса на 
-                    <span class="text-gradient text-2xl font-black block mt-2">
-                        маркетинг и AI автоматизация
-                    </span>
-                </p>
+    Използвайте слайдърите, за да изчислите пропуснатите ползи от липса на 
+    <span class="text-gradient text-2xl font-black block mt-2">
+        маркетинг и AI автоматизация
+    </span>
+</p>
             </div>
 
             <div class="space-y-10">
@@ -462,7 +317,7 @@
                         <span id="leads-val" class="text-2xl font-black text-sky-400">50</span>
                     </div>
                     <input type="range" id="leads-range" min="5" max="500" value="50" 
-                        class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-[#FF8C00] transition-all">
+                        class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-[#FF8C00]">
                 </div>
 
                 <div class="space-y-4">
@@ -470,13 +325,13 @@
                         <label class="font-bold text-gray-200">Средна печалба от клиент (евро):</label>
                         <span id="profit-val" class="text-2xl font-black text-sky-400">500</span>
                     </div>
-                    <input type="range" id="profit-range" min="10" max="1000" step="10" value="500" 
-                        class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-[#FF8C00] transition-all">
+                    <input type="range" id="profit-range" min="30" max="10000" step="100" value="500" 
+                        class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-[#FF8C00]">
                 </div>
 
                 <div class="mt-12 p-8 bg-sky-400/5 rounded-3xl border border-sky-400/20 text-center relative">
                     <p class="text-sm uppercase tracking-widest text-gray-400 mb-2 font-bold">Пропуснати месечни приходи:</p>
-                    <div id="loss-display" class="text-5xl md:text-7xl font-black text-orange-500 mb-4 transition-all duration-200">
+                    <div id="loss-display" class="text-5xl md:text-7xl font-black text-orange-500 mb-4 animate-pulse">
                         17,500 евро
                     </div>
                     <p class="text-xs text-gray-500 italic">Изчислено на база 70% средна загуба на потенциални клиенти поради бавен отговор.</p>
@@ -491,103 +346,6 @@
         </div>
     </div>
 </section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const leadsRange = document.getElementById('leads-range');
-        const profitRange = document.getElementById('profit-range');
-        const leadsVal = document.getElementById('leads-val');
-        const profitVal = document.getElementById('profit-val');
-        const lossDisplay = document.getElementById('loss-display');
-        const calculatorSection = document.getElementById('calculator');
-
-        let userInteracted = false;
-
-        // Основна функция за обновяване на числата
-        function updateCalculator() {
-            const leads = parseInt(leadsRange.value);
-            const profit = parseInt(profitRange.value);
-            
-            leadsVal.textContent = leads;
-            profitVal.textContent = profit.toLocaleString('bg-BG');
-            
-            const annualLoss = Math.round(leads * 0.7 * profit);
-            lossDisplay.textContent = annualLoss.toLocaleString('bg-BG') + ' евро';
-        }
-
-        // Слушатели за потребителска намеса
-        leadsRange.addEventListener('input', () => {
-            userInteracted = true;
-            updateCalculator();
-        });
-        profitRange.addEventListener('input', () => {
-            userInteracted = true;
-            updateCalculator();
-        });
-
-        // Функция за плавна анимация на стойностите
-        function animateValue(element, start, end, duration, callback) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (userInteracted) return; // Спира, ако потребителят пипне
-
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                
-                // Easing функция (ease-in-out)
-                const ease = progress < .5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
-                
-                const currentValue = Math.floor(start + (end - start) * ease);
-                element.value = currentValue;
-                updateCalculator();
-
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                } else if (callback) {
-                    callback();
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
-
-        // "Демо" хореографията
-        function runDemo() {
-            if (userInteracted) return;
-
-            // 1. Движение напред
-            // Leads: от 50 до 150
-            // Profit: от 500 до 900 (близо до макс 1000)
-            animateValue(leadsRange, 50, 150, 1000);
-            animateValue(profitRange, 500, 900, 1200, () => {
-                // 2. Пауза
-                setTimeout(() => {
-                    // 3. Връщане назад
-                    if (!userInteracted) {
-                        animateValue(leadsRange, 150, 50, 1000);
-                        animateValue(profitRange, 900, 500, 1000);
-                    }
-                }, 300);
-            });
-        }
-
-        // Intersection Observer - пуска демото, когато се види секцията
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(runDemo, 500);
-                    observer.disconnect(); 
-                }
-            });
-        }, { threshold: 0.3 });
-
-        if (calculatorSection) {
-            observer.observe(calculatorSection);
-        }
-        
-        // Първоначално извикване
-        updateCalculator();
-    });
-</script>
 
 <script>
     const leadsRange = document.getElementById('leads-range');
@@ -623,26 +381,26 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-            <div class="hidden md:block absolute top-[40px] left-0 w-full h-0.5 bg-gradient-to-r from-sky-400/10 via-orange-500/10 to-sky-400/10 -z-10"></div>
+            <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-sky-400/20 via-orange-500/20 to-sky-400/20 -z-10"></div>
 
-            <div id="step-1" class="group text-center transition-all duration-500 rounded-2xl p-4">
-                <div class="step-circle w-20 h-20 bg-zinc-900 border-2 border-sky-400/30 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black text-sky-400 transition-all duration-500 relative z-10">
+            <div class="group text-center">
+                <div class="w-20 h-20 bg-zinc-900 border-2 border-sky-400 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black text-sky-400 group-hover:bg-sky-400 group-hover:text-black transition-all duration-300">
                     1
                 </div>
                 <h3 class="text-xl font-bold mb-3">Анализ</h3>
                 <p class="text-gray-400 text-sm">Изчислете загубите си с нашия интерактивен AI калкулатор.</p>
             </div>
 
-            <div id="step-2" class="group text-center transition-all duration-500 rounded-2xl p-4">
-                <div class="step-circle w-20 h-20 bg-zinc-900 border-2 border-orange-500/30 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black text-orange-500 transition-all duration-500 relative z-10">
+            <div class="group text-center">
+                <div class="w-20 h-20 bg-zinc-900 border-2 border-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black text-orange-500 group-hover:bg-orange-500 group-hover:text-black transition-all duration-300">
                     2
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-orange-500">Стратегия</h3>
                 <p class="text-gray-400 text-sm">Изготвяме вашата индивидуална стратегия за растеж.</p>
             </div>
 
-            <div id="step-3" class="group text-center transition-all duration-500 rounded-2xl p-4">
-                <div class="step-circle w-20 h-20 bg-zinc-900 border-2 border-sky-400/30 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black text-sky-400 transition-all duration-500 relative z-10">
+            <div class="group text-center">
+                <div class="w-20 h-20 bg-zinc-900 border-2 border-sky-400 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black text-sky-400 group-hover:bg-sky-400 group-hover:text-black transition-all duration-300">
                     3
                 </div>
                 <h3 class="text-xl font-bold mb-3">Резултати</h3>
@@ -651,87 +409,11 @@
         </div>
 
         <div class="mt-20 text-center">
-            <a id="plan-btn" href="#booking" class="bg-white/5 backdrop-blur-md border border-white/10 px-12 py-5 rounded-2xl font-black text-xl text-white transition-all duration-500 inline-block shadow-lg">
+            <a href="#booking" class="bg-white/5 backdrop-blur-md border border-white/10 px-12 py-5 rounded-2xl font-black text-xl hover:bg-orange-500 hover:text-black transition-all inline-block shadow-2xl">
                 Готови ли сте за стъпка 1?
             </a>
         </div>
     </div>
-
-    <style>
-        /* Стилове за "Светването" (Active States) */
-        
-        /* Светване за сините стъпки (1 и 3) */
-        .glow-sky .step-circle {
-            border-color: #38bdf8 !important; /* Sky Blue */
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
-            background-color: rgba(56, 189, 248, 0.1);
-            transform: scale(1.15);
-            color: white;
-        }
-
-        /* Светване за оранжевата стъпка (2) */
-        .glow-orange .step-circle {
-            border-color: #FF8C00 !important; /* Orange */
-            box-shadow: 0 0 30px rgba(255, 140, 0, 0.6);
-            background-color: rgba(255, 140, 0, 0.1);
-            transform: scale(1.15);
-            color: white;
-        }
-
-        /* Светване за бутона */
-        .glow-btn {
-            background-color: #FF8C00 !important;
-            color: black !important;
-            border-color: #FF8C00 !important;
-            box-shadow: 0 0 40px rgba(255, 140, 0, 0.5) !important;
-            transform: scale(1.05);
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const planSection = document.getElementById('plan');
-            const step1 = document.getElementById('step-1');
-            const step2 = document.getElementById('step-2');
-            const step3 = document.getElementById('step-3');
-            const planBtn = document.getElementById('plan-btn');
-
-            // Настройка на последователността (хореографията)
-            const runSequence = () => {
-                // Времената са в милисекунди (ms)
-                
-                // 1. Светва Стъпка 1
-                setTimeout(() => step1.classList.add('glow-sky'), 0);
-                setTimeout(() => step1.classList.remove('glow-sky'), 600); // Гасне
-
-                // 2. Светва Стъпка 2 (след 600ms)
-                setTimeout(() => step2.classList.add('glow-orange'), 600);
-                setTimeout(() => step2.classList.remove('glow-orange'), 1200); // Гасне
-
-                // 3. Светва Стъпка 3 (след 1200ms)
-                setTimeout(() => step3.classList.add('glow-sky'), 1200);
-                setTimeout(() => step3.classList.remove('glow-sky'), 1800); // Гасне
-
-                // 4. Светва Бутона най-накрая (след 1800ms)
-                setTimeout(() => planBtn.classList.add('glow-btn'), 1800);
-                setTimeout(() => planBtn.classList.remove('glow-btn'), 2600); // Гасне и остава нормален
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Изчакваме малко (300ms) преди да почне шоуто
-                        setTimeout(runSequence, 300);
-                        observer.unobserve(planSection); // Изпълнява се само веднъж
-                    }
-                });
-            }, { threshold: 0.4 }); // Задейства се, когато 40% от секцията е видима
-
-            if (planSection) {
-                observer.observe(planSection);
-            }
-        });
-    </script>
 </section>
   
     <section id="narrative" class="py-32 px-4 relative z-10">
@@ -753,70 +435,9 @@
   
 <section id="comparison" class="py-24 relative z-10 bg-black/20">
     <div class="max-w-5xl mx-auto px-4">
-        <div id="stamp-trigger" class="relative text-center mb-24 perspective-1000">
-            
-            <div id="shockwave" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/10 rounded-[100%] blur-3xl opacity-0 scale-0 pointer-events-none z-0"></div>
-
-            <h2 id="stamp-text" class="relative z-10 text-4xl md:text-6xl font-black uppercase italic tracking-tighter opacity-0 scale-[3] blur-sm transition-none">
-                ЗАЩО <span class="text-sky-400">NEW LEVEL</span> Е В <br class="md:hidden"> ДРУГА ЛИГА?
-            </h2>
-        </div>
-
-        <style>
-            /* 1. Анимация на забиването (Slam) */
-            @keyframes stamp-slam {
-                0% {
-                    opacity: 0;
-                    transform: scale(3) rotate(-5deg); /* Започва огромно и леко завъртяно */
-                    filter: blur(10px);
-                }
-                70% {
-                    opacity: 1;
-                    transform: scale(0.9); /* Удря силно (свива се малко повече) */
-                    filter: blur(0px);
-                }
-                100% {
-                    opacity: 1;
-                    transform: scale(1) rotate(0deg); /* Връща се в нормално състояние */
-                }
-            }
-
-            /* 2. Анимация на шоковата вълна (Dust) */
-            @keyframes shockwave-expand {
-                0% {
-                    opacity: 0.6;
-                    transform: translate(-50%, -50%) scale(0.5);
-                }
-                100% {
-                    opacity: 0;
-                    transform: translate(-50%, -50%) scale(2); /* Разширява се и изчезва */
-                }
-            }
-
-            /* 3. Класове за активиране */
-            .animate-slam {
-                animation: stamp-slam 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-            }
-
-            .animate-shockwave {
-                animation: shockwave-expand 0.6s ease-out forwards;
-            }
-        </style>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const trigger = document.getElementById('stamp-trigger');
-                const text = document.getElementById('stamp-text');
-                const shockwave = document.getElementById('shockwave');
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            // 1. Удряме печата
-                            text.classList.add('animate-slam');
-                            
-                            // 2. Вдигаме прах (точно когато удари - след 250ms)
-                            setTimeout
+        <h2 class="text-3xl md:text-5xl font-black text-center mb-16 uppercase italic tracking-tighter">
+            Защо <span class="text-sky-400">New Level</span> е в друга лига?
+        </h2>
 
         <div class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center bg-white/5 p-4 rounded-[24px] border border-white/10 group hover:bg-white/10 transition-all duration-500">
