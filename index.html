@@ -103,29 +103,29 @@
     <div id="cursor-glow"></div>
 
     <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-        <div class="max-w-5xl w-full bg-black/40 backdrop-blur-xl border border-white/10 rounded-full p-2 pl-6 pr-2 flex justify-between items-center shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+        <div class="relative max-w-5xl w-full bg-black/60 backdrop-blur-xl border border-white/10 rounded-full p-2 pl-6 pr-2 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
             
-            <a href="#" class="flex items-center hover:opacity-80 transition-opacity mr-8">
+            <a href="#" class="flex items-center hover:opacity-80 transition-opacity z-20">
                 <img src="logo.gif" alt="New Level Logo" 
                      class="h-14 w-auto object-cover scale-150"
                      style="-webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%); mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);">
             </a>
 
-            <div class="hidden md:flex items-center gap-1 bg-white/5 rounded-full p-1 border border-white/5">
-                <a href="#services" class="px-5 py-2.5 rounded-full text-sm font-bold text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-1 bg-white/5 rounded-full p-1 border border-white/5 z-10">
+                <a href="#services" class="px-5 py-2.5 rounded-full text-sm font-bold text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300">
                     Услуги
                 </a>
-                <a href="#narrative" class="px-5 py-2.5 rounded-full text-sm font-bold text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                <a href="#narrative" class="px-5 py-2.5 rounded-full text-sm font-bold text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300">
                     Видин
                 </a>
-                <a href="#booking" class="px-5 py-2.5 rounded-full text-sm font-bold text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                <a href="#booking" class="px-5 py-2.5 rounded-full text-sm font-bold text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300">
                     Контакти
                 </a>
             </div>
 
-            <a href="#booking" class="group relative overflow-hidden bg-[#FF8C00] px-6 py-3 rounded-full font-black text-black text-sm transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,140,0,0.4)] ml-auto">
+            <a href="#booking" class="group relative overflow-hidden bg-[#FF8C00] px-6 py-3 rounded-full font-black text-black text-sm transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,140,0,0.4)] z-20 ml-auto">
                 <span class="relative z-10 flex items-center gap-2">
-                    START PROJECT 
+                    Свържете се с нас!
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
@@ -548,32 +548,32 @@
             </div>
         </div>
   
-    <footer id="booking" class="relative z-10 pt-32 pb-10 border-t border-white/5 bg-black/40 overflow-hidden">
+    <footer id="booking" class="relative z-10 pt-32 pb-0 border-t border-white/5 bg-black/40 overflow-hidden">
         
         <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
 
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 relative z-10 mb-20">
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-end">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
                 
                 <div>
-                    <h2 class="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter mb-8">
-                        LET'S BUILD <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">THE FUTURE.</span>
+                    <h2 class="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter mb-8 uppercase">
+                        ДА ИЗГРАДИМ <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">БЪДЕЩЕТО.</span>
                     </h2>
                     
                     <div class="flex flex-col gap-6 text-lg text-gray-400 font-medium max-w-md">
                         <p>Готови ли сте да доминирате пазара във Видин? Ние не просто правим реклама, ние създаваме дигитални империи.</p>
                         
-                        <div class="flex gap-4 mt-4">
+                        <div class="flex flex-col sm:flex-row gap-4 mt-4">
                              <a href="tel:0878184718" class="flex items-center gap-3 text-white hover:text-[#FF8C00] transition-colors group">
-                                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF8C00] transition-colors">
+                                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF8C00] transition-colors bg-white/5">
                                     📞
                                 </div>
                                 <span class="font-bold">0878 184 718</span>
                             </a>
                             <a href="mailto:office@newlevel.bg" class="flex items-center gap-3 text-white hover:text-[#FF8C00] transition-colors group">
-                                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF8C00] transition-colors">
+                                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#FF8C00] transition-colors bg-white/5">
                                     ✉️
                                 </div>
                                 <span class="font-bold">office@newlevel.bg</span>
@@ -583,10 +583,15 @@
                 </div>
 
                 <div class="relative">
-                    <p class="text-xs font-bold tracking-[0.2em] text-gray-500 mb-4 uppercase">Showreel 2026 / Vidin</p>
+                    <p class="text-xs font-bold tracking-[0.2em] text-gray-500 mb-4 uppercase flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                        Showreel 2026 / Vidin
+                    </p>
                     
-                    <div class="relative w-full rounded-2xl overflow-hidden bg-black/50 border border-white/10">
-                        <div class="absolute inset-0 bg-[#FF8C00]/10 mix-blend-overlay z-10 pointer-events-none"></div> <div style="-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);">
+                    <div class="relative w-full rounded-2xl overflow-hidden bg-black/50 border border-white/10 shadow-2xl">
+                        <div class="absolute inset-0 bg-[#FF8C00]/10 mix-blend-overlay z-10 pointer-events-none"></div>
+                        
+                        <div style="-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);">
                             <video autoplay muted loop playsinline class="w-full h-auto object-cover scale-110 opacity-80 hover:opacity-100 transition-opacity duration-700">
                                 <source src="video.mp4" type="video/mp4">
                             </video>
@@ -595,23 +600,23 @@
                 </div>
             </div>
 
-            <div class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="border-t border-white/10 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex gap-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
                     <a href="#" class="hover:text-white transition">Instagram</a>
                     <a href="#" class="hover:text-white transition">LinkedIn</a>
                     <a href="#" class="hover:text-white transition">Facebook</a>
                 </div>
-                <p class="text-gray-600 text-xs">
-                    &copy; 2026 NEW LEVEL AGENCY. ALL RIGHTS RESERVED.
+                <p class="text-gray-600 text-xs font-bold">
+                    &copy; 2026 NEW LEVEL AGENCY.
                 </p>
             </div>
 
-            <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none overflow-hidden -z-10">
-                <h1 class="text-[12rem] md:text-[18rem] font-black text-white/[0.03] leading-none tracking-tighter whitespace-nowrap">
-                    NEWLEVEL
-                </h1>
-            </div>
+        </div>
 
+        <div class="w-full text-center pointer-events-none select-none leading-none overflow-hidden pb-0 mb-[-2%]">
+            <h1 class="text-[13vw] font-black text-white/[0.03] tracking-tighter uppercase">
+                NEWLEVEL
+            </h1>
         </div>
     </footer>
 
