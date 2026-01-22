@@ -20,7 +20,7 @@
 
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.85), rgba(5, 5, 5, 0.95)), 
+            background: linear-gradient(to bottom, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.98)), 
                         url('https://preotkrii.bg/wp-content/uploads/2022/09/280079643_3257813537785990_669554798557224260_n-1024x683.jpg');
             background-attachment: fixed;
             background-position: center;
@@ -108,6 +108,7 @@
             <a href="#" class="flex items-center hover:opacity-80 transition-opacity">
                 <img src="logo.gif" alt="New Level Logo" class="h-12 w-auto object-contain">
             </a>
+
             <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
                 <a href="#services" class="hover:text-white transition">Услуги</a>
                 <a href="#narrative" class="hover:text-white transition">Видин</a>
@@ -117,31 +118,42 @@
         </div>
     </nav>
 
-<section class="relative max-w-7xl mx-auto pt-32 pb-40 px-4 text-center z-10">
+<section class="relative max-w-7xl mx-auto pt-24 pb-40 px-4 text-center z-10">
     
-    <p class="text-orange-500 font-bold tracking-widest uppercase text-[10px] md:text-xs mb-4">
+    <p class="text-orange-500 font-bold tracking-widest uppercase text-[10px] md:text-xs mb-4 animate-pulse">
         За собственици на бизнес във Видин и региона
     </p>
 
-    <h1 class="text-2xl md:text-5xl font-extrabold mb-8 leading-[1.2] tracking-tight max-w-4xl mx-auto">
-        Превърнете бизнеса си в <span class="text-gradient">магнит за клиенти</span>, 
-        без да пилеете бюджет за неработеща реклама.
+    <h1 class="text-2xl md:text-5xl font-extrabold mb-6 leading-[1.2] tracking-tight max-w-4xl mx-auto">
+        Превърнете бизнеса си в <span class="text-gradient">магнит за клиенти</span> с AI видео маркетинг.
     </h1>
 
     <p class="text-gray-300 text-base md:text-lg mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
-        Използваме изкуствен интелект и доказани стратегии, за да автоматизираме продажбите ви във Видин и цяла България. Вие почивате, AI работи.
+        Не просто уебсайт, а цялостна система за автоматизация на продажбите.
     </p>
 
-    <div class="flex flex-col items-center gap-5">
-        <div class="flex flex-col sm:flex-row justify-center gap-5">
-            <a href="#booking" class="bg-white text-black px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl">
+    <div class="relative max-w-4xl mx-auto group mt-12">
+        
+        <div class="absolute -inset-10 bg-gradient-to-r from-[#FF8C00]/20 to-sky-400/20 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition duration-1000 -z-10"></div>
+        
+        <div class="relative rounded-[30px] overflow-hidden">
+            
+            <video autoplay muted loop playsinline class="w-full h-auto object-cover block scale-110 transform origin-center">
+                <source src="video.mp4" type="video/mp4">
+                Вашият браузър не поддържа видео.
+            </video>
+        </div>
+
+        <div class="absolute -bottom-8 left-0 right-0 flex justify-center z-20">
+            <a href="#booking" class="bg-[#FF8C00] text-black px-10 py-4 rounded-full font-black text-lg hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,140,0,0.4)] border-4 border-[#1a1a1a] flex items-center gap-2">
                 Резервирай безплатна диагностика
-            </a>
-            <a href="#services" class="bg-white/5 backdrop-blur-md border border-white/10 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all">
-                Нашите услуги
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
             </a>
         </div>
-        
+    </div>
+    <div class="mt-16">
         <p class="text-gray-500 text-xs font-medium">
             ⭐⭐⭐⭐⭐ Доверете се на местния опит и иновациите.
         </p>
@@ -484,10 +496,10 @@
     </div>
 </section>
 
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-3xl mx-auto pb-24">
             <h2 class="text-3xl font-black text-center mb-12 uppercase tracking-tighter">Често задавани въпроси</h2>
             
-            <div class="space-y-4">
+            <div class="space-y-4 px-4">
                 <div class="bg-glass p-6 rounded-2xl border border-white/5 hover:border-orange-500 transition-all cursor-pointer group">
                     <h4 class="font-bold text-lg mb-2 flex justify-between items-center">
                         Твърде малък ли е бизнесът ми за AI автоматизация?
@@ -520,8 +532,6 @@
                 </a>
             </div>
         </div>
-    </div>
-</section>
   
     <footer id="booking" class="py-20 border-t border-white/5 relative z-10">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
