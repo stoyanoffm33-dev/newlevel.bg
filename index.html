@@ -102,12 +102,12 @@
 
     <div id="cursor-glow"></div>
 
-    <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-        <div class="relative max-w-5xl w-full bg-black/60 backdrop-blur-xl border border-white/10 rounded-full p-2 pl-6 pr-2 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+    <nav class="fixed top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-3 md:px-4">
+        <div class="relative w-full max-w-5xl bg-black/60 backdrop-blur-xl border border-white/10 rounded-full p-1.5 md:p-2 pl-4 md:pl-6 pr-1.5 md:pr-2 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
             
-            <a href="#" class="flex items-center hover:opacity-80 transition-opacity z-20">
+            <a href="#" class="flex items-center hover:opacity-80 transition-opacity z-20 flex-shrink-0">
                 <img src="logo.gif" alt="New Level Logo" 
-                     class="h-14 w-auto object-cover scale-150"
+                     class="h-9 md:h-14 w-auto object-cover scale-125 md:scale-150 origin-left"
                      style="-webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%); mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);">
             </a>
 
@@ -123,10 +123,12 @@
                 </a>
             </div>
 
-            <a href="#booking" class="group relative overflow-hidden bg-[#FF8C00] px-6 py-3 rounded-full font-black text-black text-sm transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,140,0,0.4)] z-20 ml-auto">
+            <a href="#booking" class="group relative overflow-hidden bg-[#FF8C00] px-4 py-2 md:px-6 md:py-3 rounded-full font-black text-black text-xs md:text-sm transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,140,0,0.4)] z-20 ml-auto flex-shrink-0">
                 <span class="relative z-10 flex items-center gap-2">
-                    Свържете се с нас!
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                    <span class="hidden sm:inline">Свържете се с нас!</span>
+                    <span class="sm:hidden text-[10px] uppercase tracking-wide">Контакт</span>
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
                 </span>
