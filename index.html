@@ -1060,9 +1060,38 @@
             glow.style.width = '500px';
             glow.style.height = '500px';
         });
+        <div class="chatbot-wrapper">
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="bot-info">
+                <div class="bot-avatar">
+    <img src="vibebot-banner.webp" alt="Vibe Bot" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+</div>
+                <div>
+                    <h3>New Level VibeBot</h3>
+                    <span class="status">● На линия</span>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()">✖</button>
+        </div>
+
+        <div class="chat-messages" id="messagesArea">
+            <div class="message bot">
+                Здравей! Аз съм Vibe Bot-a на New Level. Как мога да помогна за твоя бизнес днес? 🚀
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" placeholder="Питай нещо..." id="chatInput">
+            <button id="sendBtn">➤</button>
+        </div>
+    </div>
+
+    <button class="chat-launcher" onclick="toggleChat()">💬</button>
+</div>
     <script>
     // --- КОНФИГУРАЦИЯ ЗА NEW LEVEL ---
-    const API_KEY = 'СЛОЖИ_ТУК_ТВОЯ_GEMINI_API_KEY'; // <--- ВАЖНО: Сложи ключа си тук
+    const API_KEY = 'AIzaSyDKoEpG4wpRXCy4hdODEBWYDbOJphIssm4'; // <--- ВАЖНО: Сложи ключа си тук
 
     // Извадих най-важното от сайта ти за контекст на бота:
     const SYSTEM_INSTRUCTION = `
